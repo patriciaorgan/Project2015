@@ -1,0 +1,21 @@
+\\fs2\01110489\visual studio 2010\Projects\TwitterTest\TwitterTest\bin\Debug\TwitterTest.exe
+\\fs2\01110489\visual studio 2010\Projects\TwitterTest\TwitterTest\bin\Debug\TwitterTest.pdb
+\\fs2\01110489\visual studio 2010\Projects\TwitterTest\TwitterTest\obj\x86\Debug\TwitterTest.exe
+\\fs2\01110489\visual studio 2010\Projects\TwitterTest\TwitterTest\obj\x86\Debug\TwitterTest.pdb
+F:\Visual Studio 2010\Projects\TwitterTest\TwitterTest\obj\x86\Debug\TwitterTest.exe
+F:\Visual Studio 2010\Projects\TwitterTest\TwitterTest\obj\x86\Debug\TwitterTest.pdb
+F:\Visual Studio 2010\Projects\TwitterTest\TwitterTest\bin\Debug\TwitterTest.exe
+F:\Visual Studio 2010\Projects\TwitterTest\TwitterTest\bin\Debug\TwitterTest.pdb
+Z:\Documents\TwitterTest\TwitterTest\obj\x86\Debug\TestApp.csprojResolveAssemblyReference.cache
+Z:\Documents\TwitterTest\TwitterTest\bin\Debug\TwitterTest.exe.config
+Z:\Documents\TwitterTest\TwitterTest\bin\Debug\TwitterTest.exe
+Z:\Documents\TwitterTest\TwitterTest\bin\Debug\TwitterTest.pdb
+Z:\Documents\TwitterTest\TwitterTest\bin\Debug\Newtonsoft.Json.dll
+Z:\Documents\TwitterTest\TwitterTest\obj\x86\Debug\TwitterTest.exe
+Z:\Documents\TwitterTest\TwitterTest\obj\x86\Debug\TwitterTest.pdb
+Z:\Documents\TwitterTest\TwitterTest\bin\Debug\HtmlAgilityPack.dll
+Z:\Documents\TwitterTest\TwitterTest\bin\Debug\HtmlAgilityPack.pdb
+Z:\Documents\TwitterTest\TwitterTest\bin\Debug\HtmlAgilityPack.xml
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\TwitterTest.exe.config
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\obj\x86\Debug\TwitterTest.exe
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\obj\x86\Debug\TwitterTest.pdb

@@ -1,0 +1,2 @@
+\\vmware-host\Shared Folders\Documents\TwitterTest\TwitterTest\bin\Debug\ConsoleApplication.exe.config
+\\vmware-host\Shared Folders\Documents\TwitterTest\TwitterTest\obj\x86\Debug\Project2015.csprojResolveAssemblyReference.cache
