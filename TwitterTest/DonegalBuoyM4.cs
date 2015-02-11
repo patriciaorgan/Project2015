@@ -7,6 +7,15 @@ namespace TestApp
 {
     class DonegalBuoyM4:TestApp.WeatherStation
     {
+        internal string _stationID;
+
+        public DonegalBuoyM4()
+        {
+            _stationID = "M4";
+        }
+        
+        public string StationID { get { return _stationID; } }
+
         public override void addSub(Subscriber sub)
         {
         }
@@ -14,16 +23,16 @@ namespace TestApp
         {
         }
 
-        public override void setUpdate(String words)
+        public override void UpdateSubs()
         {
-            this.latestUpdate = words;
+
             // this.latestUpdate = "Donegal:Jan26 10:00 ☔ 8.3°C  N/NW/18.7kn/Gust25.9kn #BuoyM4";
         }
 
-        public override String getUpdate()
+        public override void getUpdate()
         {
-
-            return this.latestUpdate;
+            
         }
+
     }
 }

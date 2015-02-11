@@ -5,6 +5,7 @@ using System.Text;
 using Tweetinvi;
 using TestApp;
 using HtmlAgilityPack;
+using System.Threading;
 
 namespace TestApp
 {
@@ -16,7 +17,7 @@ namespace TestApp
 
             CorkBuoyM3 m3 = new CorkBuoyM3();
            // Console.WriteLine(Double.Parse(m3.gsDate.ToString);
-            Console.WriteLine(m3.gsTime);
+            //Console.WriteLine(m3.gsTime);
             //Console.ReadLine();
 
 
@@ -86,7 +87,7 @@ namespace TestApp
             foreach (var h in headings)
             { Console.WriteLine(h);  }
              * */
-
+            /*
            string month = DateTime.Now.ToShortDateString();
            string day = DateTime.Now.Day.ToString();
            string update = month.Substring(0,6)+" "+headings[1, 3].Substring(11, 5)+" #Buoy" +headings[1, 0]+ "  ⛅Temp/"+headings[1, 8]+"°C 💨"+headings[1, 6]+"kn/Gust/"+headings[1, 7]+"kn Hum/"+headings[1, 10]+"%";
@@ -95,15 +96,17 @@ namespace TestApp
               
                headings[0, 7] + " "+headings[1, 7] + " "+ 
                headings[0, 9] + " "+headings[1, 9] + " "+ 
-             * */
+             
               
 
             Console.WriteLine(update);
+            */
            //string to test emojicons from application
             //string testemoji = "Feb05 18:00 ⛅ 9.5°C 💨NW/14.7kn/Gust19kn Hum67%  #BuoyM3";
 
            // Console.WriteLine(testemoji);
             //Twitter application connection created and test publishing
+            /*
             try
             {
 
@@ -119,11 +122,44 @@ namespace TestApp
             {
                 Console.WriteLine("Error has occured: " + ex);
             }
+             * */
             
-            Console.ReadKey();
+           // Console.ReadKey();
         
-          
+
+          //create a Threading.timer object to call the update method every 20000 milliseconds
+            Timer time = new Timer(TimerCallback, null, 0, 20000);
+            //to keep the console open and to keep the program running
+            Console.WriteLine("DO NOT CLOSE  THIS CONSOLE IT WILL STOP THE APPLICATION RUNNING");
+            Console.ReadLine();
+
+            /*
+            // TwitterCredentials.SetCredentials("2999399709-2wey5BUJYyL7Cm98d8IFFGgF0N3JaBTPMgGDQn2", "RpEA4GGmhzU66ib8THEDjbvrYTq4OOHmOuF9MvDi3tE6H", "d4R7LaqJJWAVB5FgTkkPKtNtY", "boFYhisfKKvBvgZj4pNfDcOQbfqNdv2jeBzh871rkdNrUoBSd3");
+            TwitterCredentials.ApplicationCredentials = TwitterCredentials.CreateCredentials("2999399709-2wey5BUJYyL7Cm98d8IFFGgF0N3JaBTPMgGDQn2", "RpEA4GGmhzU66ib8THEDjbvrYTq4OOHmOuF9MvDi3tE6H", "d4R7LaqJJWAVB5FgTkkPKtNtY", "boFYhisfKKvBvgZj4pNfDcOQbfqNdv2jeBzh871rkdNrUoBSd3");
+
+            var credentials = TwitterCredentials.CreateCredentials("Access_Token", "Access_Token_Secret", "Consumer_Key", "Consumer_Secret");
+            TwitterCredentials.ExecuteOperationWithCredentials(credentials, () =>
+            {
+                Tweet.PublishTweet("myTweet");
+            });
+            * */
+        }//end main
+
+        private static void TimerCallback(Object o)
+        {
+            //WeatherStation ws = new WeatherStation();
+            Subscriber twit = new Twitter();
+            WeatherStation cork = new CorkBuoyM3();
+
+            cork.addSub(twit);
+            cork.getUpdate();
+            cork.UpdateSubs();
+
+            //force the collection
+            GC.Collect();
         }
+
+      
 
     }
 }

@@ -9,20 +9,24 @@ namespace TestApp
     class MIPWS: TestApp.WeatherStation
     {
 
-        public override void addSub(Subscriber sub) {
+        public override void addSub(Subscriber sub)
+        {
         }
         public override void removeSub(Subscriber sub)
         {
         }
-        public override void setUpdate(String words)
-        { 
-        }
 
-        public override String getUpdate()
+        public override void UpdateSubs()
         {
-            string variable="";
-            return variable;
+
+            // this.latestUpdate = "Dublin:Jan26 10:00 ☔ 6.8°C  W/21kts/Gust25kn Hum81%  #BuoyM2";
+        }
+
+        public override void getUpdate()
+        {
+
 
         }
+        
     }
 }

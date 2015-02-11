@@ -7,24 +7,33 @@ namespace TestApp
 {
     class DublinBuoyM2: TestApp.WeatherStation
     {
+        internal string _stationID;
 
-        public override void addSub(Subscriber sub) 
-        { 
+        public DublinBuoyM2()
+        {
+            _stationID = "M2";
+        }
+        public string StationID { get { return _stationID; } }
+
+        
+
+        public override void addSub(Subscriber sub)
+        {
         }
         public override void removeSub(Subscriber sub)
-        { 
+        {
         }
 
-        public override void setUpdate(String words)
-        {
-            this.latestUpdate = words;
-           // this.latestUpdate = "Dublin:Jan26 10:00 ☔ 6.8°C  W/21kts/Gust25kn Hum81%  #BuoyM2";
-        }
-     
-        public override String getUpdate() 
+        public override void UpdateSubs()
         {
             
-            return this.latestUpdate;
+            // this.latestUpdate = "Dublin:Jan26 10:00 ☔ 6.8°C  W/21kts/Gust25kn Hum81%  #BuoyM2";
         }
+
+        public override void getUpdate()
+        {
+            
+        }
+
     }
 }

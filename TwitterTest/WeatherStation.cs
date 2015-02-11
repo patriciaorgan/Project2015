@@ -8,25 +8,23 @@ namespace TestApp
 {
      abstract class WeatherStation
     {
-        //array is dynamic so can be changed or added to if needed
-        protected  Subscriber[] subscribers = new Subscriber[3];
-        protected string latestUpdate;
-        
-        protected double longitude;
-        protected double latitude;
-        protected double atmoPressure;
-        protected double windDir;
-        protected double windSpeed;
-        protected double gust;
-        protected double AirTemp;
-        protected double relHumidity;
+
+        //array of subscribers, setting to what is required for now but can be increased
+        internal Subscriber[] subscribers = new Subscriber[3];
+
+        //2d array to hold the potential headings and data values of ERDDAP HTML pages, has a max number of 18
+        internal string[,] table;
+        internal string  update;
 
 
         public abstract void addSub(Subscriber sub);
         public abstract void removeSub(Subscriber sub);
-        public abstract void setUpdate(String words);
 
-        public abstract String getUpdate();
+        //this will update all that is subscribed and been previously added
+        public abstract void UpdateSubs();
+
+        //this will use the URL of ERDDAP and call it for the last hour, and store the result in the string 2d array
+        public abstract void getUpdate();
      
     }
 }
