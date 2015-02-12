@@ -24,15 +24,15 @@ namespace TestApp
         {
         }
 
-        public override void UpdateSubs()
+        public override void UpdateSubs(DateTime lastTime)
         {
             
             // this.latestUpdate = "Dublin:Jan26 10:00 ☔ 6.8°C  W/21kts/Gust25kn Hum81%  #BuoyM2";
         }
 
-        public override void getUpdate()
+        public override DateTime getUpdate(DateTime lastTime)
         {
-            
+            return DateTime.Now;
         }
 
     }

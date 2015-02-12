@@ -21,10 +21,10 @@ namespace TestApp
         public abstract void removeSub(Subscriber sub);
 
         //this will update all that is subscribed and been previously added
-        public abstract void UpdateSubs();
+        public abstract void UpdateSubs(DateTime lastTime);
 
         //this will use the URL of ERDDAP and call it for the last hour, and store the result in the string 2d array
-        public abstract void getUpdate();
+        public abstract DateTime getUpdate(DateTime lastTime);
      
     }
 }
