@@ -37,7 +37,7 @@ namespace TestApp
 
         public override void update(WeatherStation ws)
         {
-            string tweetPost = "";
+           // string tweetPost = "";
             string heading = ws.table[1, 0];
             Console.WriteLine("Tweet weather " + heading + " " + DateTime.Now);
 

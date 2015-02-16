@@ -21,9 +21,8 @@ namespace TestApp
 
         private string _stationID;
         //base url http://erddap.marine.ie/erddap/tabledap/IWBNetwork.htmlTable?time,AtmosphericPressure,WindDirection,WindSpeed,Gust,AirTemperature,RelativeHumidity&station_id=%22M3%22&time>=2015-02-11T13:00:00Z
-        //changing the final elemnet related to time and station ID
-        private string url = "http://erddap.marine.ie/erddap/tabledap/IWBNetwork.htmlTable?time,AtmosphericPressure,WindDirection,WindSpeed,Gust,AirTemperature,RelativeHumidity&station_id=";
-
+        //changing the final element related to time and station ID
+        private string url;
         //this number is set based on the selections made to feed the URL
         int COLUMNS = 8;
         
@@ -75,7 +74,7 @@ namespace TestApp
                 currentTime = DateTime.Now;
                 //store the hour
                 long hour = currentTime.Hour;
-
+                
                 //only carry out this method if the time of the hour is different from the last hour
                 //and only if it is past 30 mins in the hour as the URL usually will not have displayed
                 if ((lastTime.Hour != hour) && (currentTime.Minute > 30))
@@ -97,6 +96,7 @@ namespace TestApp
             currentTime = DateTime.Now;
             //store the hour
             long hour = currentTime.Hour;
+            url = "http://erddap.marine.ie/erddap/tabledap/IWBNetwork.htmlTable?time,AtmosphericPressure,WindDirection,WindSpeed,Gust,AirTemperature,RelativeHumidity&station_id=";
 
             //only carry out this method if the time of the hour is different from the last hour
             //and only if it is past 30 mins in the hour as the URL usually will not have displayed
@@ -113,7 +113,7 @@ namespace TestApp
 
                     HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
                     HtmlAgilityPack.HtmlDocument doc = web.Load(url);
-
+                    Console.WriteLine(url);
 
                     //this is to keep count of index in loops
                     int i = 0;
