@@ -23,7 +23,7 @@ namespace TestApp
         {
         }
 
-        public override void UpdateSubs(DateTime lastTime)
+        public override void UpdateSubs()
         {
 
             // this.latestUpdate = "Donegal:Jan26 10:00 ☔ 8.3°C  N/NW/18.7kn/Gust25.9kn #BuoyM4";

@@ -8,23 +8,13 @@ namespace TestApp
 {
     class CorkBuoyM3: TestApp.WeatherStation
     {
-        //setting the variables used specifically for Cork Buoy M3 as they are not always the same
-        /* 
-         private string _temp;
-         private string _windSpeed;
-         private string _humidity;
-         private string _gust;
-         private string _windDirection;
-         private string _time;
-         */
-        
-
+ 
         private string _stationID;
         //base url http://erddap.marine.ie/erddap/tabledap/IWBNetwork.htmlTable?time,AtmosphericPressure,WindDirection,WindSpeed,Gust,AirTemperature,RelativeHumidity&station_id=%22M3%22&time>=2015-02-11T13:00:00Z
         //changing the final element related to time and station ID
         private string url;
         //this number is set based on the selections made to feed the URL
-        int COLUMNS = 8;
+        int COLUMNS = 7;
         
         //create a current data time variable
         DateTime currentTime;
@@ -66,28 +56,15 @@ namespace TestApp
         }
 
         //this method will update all the subscribers
-        public override void UpdateSubs(DateTime lastTime)
-        {
+        public override void UpdateSubs()
+        {   //loop through all Subscribers
             foreach (Subscriber sub in subscribers)
             {
-                //set the current Date time to now
-                currentTime = DateTime.Now;
-                //store the hour
-                long hour = currentTime.Hour;
-                
-                //only carry out this method if the time of the hour is different from the last hour
-                //and only if it is past 30 mins in the hour as the URL usually will not have displayed
-                if ((lastTime.Hour != hour) && (currentTime.Minute > 30))
-                {
-                    //call the overridden method of each subscriber 
-                    //and pass it this weather station object
-                    sub.update(this);
-                }
-
+                //call the overridden method of each subscriber 
+                //and pass it this weather station object
+                sub.update(this);
             }
-
-            // this.latestUpdate = "Cork:Jan26 10:00 ⛅ 9.5°C  NW/14.7kn/Gust19kn Hum67%  #BuoyM3";
-        }
+        }//end UpdateSubs method
 
         //this method extracts the info from the URL of ERDDAP and populates the table 2d array
         public override DateTime getUpdate(DateTime lastTime)
@@ -102,7 +79,6 @@ namespace TestApp
             //and only if it is past 30 mins in the hour as the URL usually will not have displayed
             if ((lastTime.Hour != hour) && (currentTime.Minute >30))
             {
-                //declare a web object and from that a document object that loads the URL that is required
                 
                  try {
                      
@@ -111,13 +87,14 @@ namespace TestApp
                      //add the search parameters like station id and date and time to the url
                     url += "%22" + _stationID + "%22&time>=" + newD + "T" + hour+ ":00:00Z";
 
+                    //declare a web object and from that a document object that loads the URL that is required
                     HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
                     HtmlAgilityPack.HtmlDocument doc = web.Load(url);
                     Console.WriteLine(url);
 
                     //this is to keep count of index in loops
                     int i = 0;
-                
+                    //this loops throught html tags <th> headers,   using the class that this particular page uses
                     foreach (HtmlNode column in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/th"))
                     {
                         //check to see if node is null
@@ -138,6 +115,7 @@ namespace TestApp
                     }
                     //reset the index
                     i = 0;
+                    //this loops throught html tags <td> data elements, using the class that this particular page uses
                     foreach (HtmlNode cell in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/td"))
                     {
                         //a catch to ensure the node is not null
@@ -163,17 +141,23 @@ namespace TestApp
                 foreach (var h in table)
                 { Console.WriteLine(h); }
 
-
-                string month = DateTime.Now.ToShortDateString();
-                this.update = month.Substring(0, 0) + hour + ":00 #Buoy" + _stationID + "  ⛅Temp/" + table[1, 5].Trim() + "°C 💨 Dir" + table[1, 2].Trim() + "°/" + table[1, 3].Trim() + "km/Gust" + table[1, 4].Trim() + "kn Hum" + table[1, 6].Trim() + "%";
-                //this.update = month.Substring(0, 6) + " " + table[1, 3].Substring(11, 5) + " #Buoy" + table[1, 0] + "  ⛅Temp/" + table[1, 8] + "°C 💨" + table[1, 6] + "kn/Gust/" + table[1, 7] + "kn Hum/" + table[1, 10] + "%";
+                int day = DateTime.Now.Day;
+                string month = DateTime.Now.ToString("MMM");
+                this.Update =   month + day +" "+ hour + ":00 #Buoy" + _stationID + "\n  ⛅Temp/" + table[1, 5].Trim() + "°C 💨 Dir" + table[1, 2].Trim() + "°/" + table[1, 3].Trim() + "km/Gust" + table[1, 4].Trim() + "kn Hum" + table[1, 6].Trim() + "%";
                 
+                
+                //call the UpdateSub method only if satisfying If statement condition
+                //means no need to check the time a second time in the other method
+                UpdateSubs();
                 return currentTime;
+
             }//end if
             else 
             {
                 return lastTime;
             }
+
+            
             
         }
 

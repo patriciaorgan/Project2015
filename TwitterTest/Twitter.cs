@@ -8,21 +8,12 @@ namespace TestApp
 {
     class Twitter : TestApp.Subscriber
     {
-         /*try
-          //  {
-                TwitterCredentials.ApplicationCredentials = TwitterCredentials.CreateCredentials("2999399709-2wey5BUJYyL7Cm98d8IFFGgF0N3JaBTPMgGDQn2","RpEA4GGmhzU66ib8THEDjbvrYTq4OOHmOuF9MvDi3tE6H",  "d4R7LaqJJWAVB5FgTkkPKtNtY", "boFYhisfKKvBvgZj4pNfDcOQbfqNdv2jeBzh871rkdNrUoBSd3");
-                
-           /* }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Error has occured: " + ex);
-            }*/
-             
+        //constructor creates the connection using the twitter API     
         public Twitter(){
-            //Twitter application connection created and test publishing
+            
             try
             {
-
+                //Twitter application connection created with my Dev Keys from test twitter account
                 TwitterCredentials.ApplicationCredentials = TwitterCredentials.CreateCredentials(
                     "2999399709-2wey5BUJYyL7Cm98d8IFFGgF0N3JaBTPMgGDQn2",
                     "RpEA4GGmhzU66ib8THEDjbvrYTq4OOHmOuF9MvDi3tE6H",
@@ -37,13 +28,9 @@ namespace TestApp
 
         public override void update(WeatherStation ws)
         {
-           // string tweetPost = "";
-            string heading = ws.table[1, 0];
-            Console.WriteLine("Tweet weather " + heading + " " + DateTime.Now);
-
-            //string date = "", time = "", weather = "";
-
-            Tweet.PublishTweet(ws.update);
+            //publish to the test twitter account
+            Console.WriteLine("Tweet weather :" + ws.Update);
+            Tweet.PublishTweet(ws.Update);
         }
 
     }

@@ -14,14 +14,20 @@ namespace TestApp
 
         //2d array to hold the potential headings and data values of ERDDAP HTML pages, has a max number of 18
         internal string[,] table;
-        internal string  update;
+        internal string  _update;
 
+        // getter and setter
+        public string Update
+        {
+            get { return _update; }
+            set { _update = value; }
+        }
 
         public abstract void addSub(Subscriber sub);
         public abstract void removeSub(Subscriber sub);
 
         //this will update all that is subscribed and been previously added
-        public abstract void UpdateSubs(DateTime lastTime);
+        public abstract void UpdateSubs();
 
         //this will use the URL of ERDDAP and call it for the last hour, and store the result in the string 2d array
         public abstract DateTime getUpdate(DateTime lastTime);
