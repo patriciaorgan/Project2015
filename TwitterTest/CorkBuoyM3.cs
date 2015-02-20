@@ -91,60 +91,79 @@ namespace TestApp
                     HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
                     HtmlAgilityPack.HtmlDocument doc = web.Load(url);
                     Console.WriteLine(url);
-
                     //this is to keep count of index in loops
                     int i = 0;
-                    //this loops throught html tags <th> headers,   using the class that this particular page uses
-                    foreach (HtmlNode column in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/th"))
-                    {
-                        //check to see if node is null
-                        if (column.InnerHtml == null)
+                   
+                        //this loops through html tags <th> headers, using the class that this particular page uses
+                        foreach (HtmlNode column in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/th"))
                         {
-                            continue;
-                        }
-                        else
-                        {
-                            //this is the length of column in the table in ERDDAP, will need adjusting if you select differnt URL
-                            if (i < COLUMNS)
+                            //check to see if node is null
+                            if (column.InnerHtml == null)
                             {
-                                table[0, i] = column.InnerHtml;
-
+                                continue;
                             }
-                            i++;
-                        }
-                    }
-                    //reset the index
-                    i = 0;
-                    //this loops throught html tags <td> data elements, using the class that this particular page uses
-                    foreach (HtmlNode cell in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/td"))
-                    {
-                        //a catch to ensure the node is not null
-                        if (cell.InnerHtml == null)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            if (i < COLUMNS)
+                            else
                             {
-                                //load into 2d array in the second row
-                                table[1, i] = cell.InnerHtml;
+                                //this is the length of column in the table in ERDDAP, will need adjusting if you select differnt URL
+                                if (i < COLUMNS)
+                                {
+                                    table[0, i] = column.InnerHtml;
+
+                                }
                                 i++;
                             }
                         }
-                    }
+                  
+                    //reset the index
+                    i = 0;
+                  
+                    //this loops throught html tags <td> data elements, using the class that this particular page uses
+                        foreach (HtmlNode cell in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/td"))
+                        {
+                            //a catch to ensure the node is not null
+                            if (cell.InnerHtml == null)
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                if (i < COLUMNS)
+                                {
+                                    //load into 2d array in the second row
+                                    table[1, i] = cell.InnerHtml;
+                                    i++;
+                                }
+                            }
+                        }//end for loop
+                    
+                
+                    
                 }catch(Exception e){
-                        Console.WriteLine("Error with reading data from URL: "+ e);
+                        Console.WriteLine("Error with reading data from URL: ");
                 }
 
                 //printing to check contence
                 foreach (var h in table)
-                { Console.WriteLine(h); }
+                { if( h != null) Console.WriteLine(h); }
 
                 int day = DateTime.Now.Day;
                 string month = DateTime.Now.ToString("MMM");
-                this.Update =   month + day +" "+ hour + ":00 #Buoy" + _stationID + "\n  ⛅Temp/" + table[1, 5].Trim() + "°C 💨 Dir" + table[1, 2].Trim() + "°/" + table[1, 3].Trim() + "km/Gust" + table[1, 4].Trim() + "kn Hum" + table[1, 6].Trim() + "%";
                 
+
+                try
+                {
+                    Compass comp = new Compass(table[1, 2].Trim());
+                    Console.WriteLine(table[1, 2].Trim());
+                    //comp.SetCompass(table[1, 2].Trim());
+
+                   // string direction = comp.choice;
+                    //this.Update = month + day + " " + hour + ":00 #Buoy" + _stationID + "\n⛅ Temp:" + table[1, 5].Trim() + "°C  Hum:" + table[1, 6].Trim() + "%\n💨 Dir:" + table[1, 2].Trim() + "°/" + table[1, 3].Trim() + "km/Gust:" + table[1, 4].Trim() + "kn";
+                    this.Update = month + day + " " + hour + ":00 #Buoy" + _stationID + "\n⛅ Temp:" + table[1, 5].Trim() + "°C  Hum:" + table[1, 6].Trim() + "%\n💨 Dir:" + comp.choice + table[1, 3].Trim() + "km/Gust:" + table[1, 4].Trim() + "kn";
+                
+                    }
+                catch(NullReferenceException e){
+                        Console.WriteLine("Table was not populated from URL ");
+                    }
                 
                 //call the UpdateSub method only if satisfying If statement condition
                 //means no need to check the time a second time in the other method

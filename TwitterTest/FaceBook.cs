@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Facebook;
 
 namespace TestApp
 {
@@ -9,6 +10,8 @@ namespace TestApp
     {
         public override void update(WeatherStation ws)
         {
+            var client = new FacebookClient();
+            dynamic me = client.Get("totten");
 
         }
     }

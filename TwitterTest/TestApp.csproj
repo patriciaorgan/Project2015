@@ -41,6 +41,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Facebook.6.8.0\lib\net45\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\..\Visual Studio 2013\Projects\testHTML\testHTML\bin\Debug\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -117,6 +120,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compass.cs" />
     <Compile Include="CorkBuoyM3.cs" />
     <Compile Include="DonegalBuoyM4.cs" />
     <Compile Include="DublinBuoyM2.cs" />
@@ -135,6 +139,7 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="ClassDiagram3.cd" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

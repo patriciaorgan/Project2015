@@ -6,6 +6,7 @@ using Tweetinvi;
 using TestApp;
 using HtmlAgilityPack;
 using System.Threading;
+using Facebook;
 
 namespace TestApp
 {
@@ -17,13 +18,18 @@ namespace TestApp
         internal static DateTime lastTimeUpdate = default(DateTime);
 
         static void Main() 
-        {   
+        {
+            //test the get method for facebook
+            var client = new FacebookClient();
+            dynamic me = client.Get("marineinst.testweather");
+            Console.WriteLine(me);
             
            //test adding of a subscriber to CorkBuoy WeatherStation
             cork.addSub(twit);
              
             //create a Threading.timer object to call the update method every 90000 milliseconds
             Timer time = new Timer(TimerCallback, null, 0, 90000);
+             
             //to keep the console open and to keep the program running
             Console.WriteLine("DO NOT CLOSE  THIS CONSOLE IT WILL STOP THE APPLICATION RUNNING");
             Console.ReadLine();

@@ -28,9 +28,12 @@ namespace TestApp
 
         public override void update(WeatherStation ws)
         {
-            //publish to the test twitter account
-            Console.WriteLine("Tweet weather :" + ws.Update);
-            Tweet.PublishTweet(ws.Update);
+            if (ws.Update != null)
+            {
+                //publish to the test twitter account
+                Console.WriteLine("Tweet weather :" + ws.Update);
+                Tweet.PublishTweet(ws.Update);
+            }
         }
 
     }
