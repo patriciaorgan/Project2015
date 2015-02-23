@@ -10,13 +10,15 @@ namespace TestApp
     {
 
         //array of subscribers, setting to what is required for now but can be increased
-        internal Subscriber[] subscribers = new Subscriber[3];
+        //using a List to be dynamic for Substribers
+        internal List<Subscriber> subscribers = new List<Subscriber>();
+        
 
         //2d array to hold the potential headings and data values of ERDDAP HTML pages, has a max number of 18
         internal string[,] table;
         internal string  _update;
 
-        // getter and setter
+        // getter and setter, not abstract as will be common behaviour for all subs
         public string Update
         {
             get { return _update; }

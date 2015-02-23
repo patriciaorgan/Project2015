@@ -33,26 +33,14 @@ namespace TestApp
         //like twitter or facebook or website widget
         public override void addSub(Subscriber sub)
         {
-            for (int i = 0; i < subscribers.Length; i++)
-            {
-                if (subscribers[i] == null)
-                {
-                    subscribers[i] = sub;
-                }
-
-            }
+            //using the List method Add
+            subscribers.Add(sub);
 
         }
         public override void removeSub(Subscriber sub)
         {
-            for (int i = 0; i < subscribers.Length; i++)
-            {
-                if (sub == subscribers[i])
-                {
-                    subscribers[i] = null;
-                }
-
-            }
+            //using the List method Remove
+            subscribers.Remove(sub);
         }
 
         //this method will update all the subscribers
@@ -135,10 +123,12 @@ namespace TestApp
                                 }
                             }
                         }//end for loop
-                    
-                
-                    
-                }catch(Exception e){
+
+                      
+
+                 }
+                 catch (Exception e)
+                 {
                         Console.WriteLine("Error with reading data from URL: ");
                 }
 
@@ -153,11 +143,9 @@ namespace TestApp
                 try
                 {
                     Compass comp = new Compass(table[1, 2].Trim());
-                    Console.WriteLine(table[1, 2].Trim());
-                    //comp.SetCompass(table[1, 2].Trim());
-
-                   // string direction = comp.choice;
-                    //this.Update = month + day + " " + hour + ":00 #Buoy" + _stationID + "\n⛅ Temp:" + table[1, 5].Trim() + "°C  Hum:" + table[1, 6].Trim() + "%\n💨 Dir:" + table[1, 2].Trim() + "°/" + table[1, 3].Trim() + "km/Gust:" + table[1, 4].Trim() + "kn";
+                   // Console.WriteLine(table[1, 2].Trim());
+                   
+                    //assign using the setter method for update string in base class
                     this.Update = month + day + " " + hour + ":00 #Buoy" + _stationID + "\n⛅ Temp:" + table[1, 5].Trim() + "°C  Hum:" + table[1, 6].Trim() + "%\n💨 Dir:" + comp.choice + table[1, 3].Trim() + "km/Gust:" + table[1, 4].Trim() + "kn";
                 
                     }

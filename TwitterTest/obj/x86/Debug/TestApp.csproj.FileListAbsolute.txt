@@ -43,3 +43,11 @@ Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\HtmlA
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\obj\x86\Debug\TestApp.csprojResolveAssemblyReference.cache
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Facebook.dll
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Facebook.xml
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.xml
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml

@@ -8,6 +8,7 @@ using HtmlAgilityPack;
 using System.Threading;
 using Facebook;
 
+
 namespace TestApp
 {
     class TestWeather
@@ -19,6 +20,8 @@ namespace TestApp
 
         static void Main() 
         {
+            try
+            {
             //test the get method for facebook
             var client = new FacebookClient();
             dynamic me = client.Get("marineinst.testweather");
@@ -26,10 +29,14 @@ namespace TestApp
             
            //test adding of a subscriber to CorkBuoy WeatherStation
             cork.addSub(twit);
-             
-            //create a Threading.timer object to call the update method every 90000 milliseconds
-            Timer time = new Timer(TimerCallback, null, 0, 90000);
-             
+            
+                //create a Threading.timer object to call the update method every 90000 milliseconds
+                Timer time = new Timer(TimerCallback, null, 0, 90000);
+
+            }catch(Exception e)
+            {
+                Console.WriteLine("Error has occured: " + e.Message);    
+            }
             //to keep the console open and to keep the program running
             Console.WriteLine("DO NOT CLOSE  THIS CONSOLE IT WILL STOP THE APPLICATION RUNNING");
             Console.ReadLine();
