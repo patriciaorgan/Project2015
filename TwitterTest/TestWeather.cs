@@ -1,25 +1,33 @@
-﻿using System;
+﻿using Facebook;
+using HtmlAgilityPack;
+using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
-using Tweetinvi;
-using TestApp;
-using HtmlAgilityPack;
 using System.Threading;
-using Facebook;
+using TestApp;
+using Tweetinvi;
 
 
 namespace TestApp
 {
+   
     class TestWeather
     {
-        //declareing these object outside main and internal so they can be used within  the namespace
+        
+
+        
+
+        //declaring these object outside main and internal so they can be used within the namespace
         internal static Subscriber twit = new Twitter();
         internal static WeatherStation cork = new CorkBuoyM3();
         internal static DateTime lastTimeUpdate = default(DateTime);
 
         static void Main() 
         {
+            
             try
             {
             //test the get method for facebook
@@ -29,8 +37,8 @@ namespace TestApp
             
            //test adding of a subscriber to CorkBuoy WeatherStation
             cork.addSub(twit);
-            
-                //create a Threading.timer object to call the update method every 90000 milliseconds
+
+            //create a Threading.timer object to call the update method every 90000 milliseconds
                 Timer time = new Timer(TimerCallback, null, 0, 90000);
 
             }catch(Exception e)

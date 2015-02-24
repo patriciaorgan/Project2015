@@ -127,7 +127,7 @@ namespace TestApp
                       
 
                  }
-                 catch (Exception e)
+                 catch (Exception)
                  {
                         Console.WriteLine("Error with reading data from URL: ");
                 }
@@ -149,7 +149,7 @@ namespace TestApp
                     this.Update = month + day + " " + hour + ":00 #Buoy" + _stationID + "\n⛅ Temp:" + table[1, 5].Trim() + "°C  Hum:" + table[1, 6].Trim() + "%\n💨 Dir:" + comp.choice + table[1, 3].Trim() + "km/Gust:" + table[1, 4].Trim() + "kn";
                 
                     }
-                catch(NullReferenceException e){
+                catch(NullReferenceException){
                         Console.WriteLine("Table was not populated from URL ");
                     }
                 
