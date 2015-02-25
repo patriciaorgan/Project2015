@@ -32,7 +32,14 @@ namespace TestApp
             {
                 //publish to the test twitter account
                 Console.WriteLine("Tweet weather :" + ws.Update);
-                Tweet.PublishTweet(ws.Update);
+                try
+                {
+                    Tweet.PublishTweet(ws.Update);
+                }
+                catch (System.TypeInitializationException)
+                {
+                    Console.WriteLine("Could not access Twitter account");
+                }
             }
         }
 
