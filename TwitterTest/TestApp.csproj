@@ -39,7 +39,7 @@
   <ItemGroup>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Autofac.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Facebook">
       <HintPath>..\packages\Facebook.6.8.0\lib\net45\Facebook.dll</HintPath>
@@ -61,33 +61,33 @@
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Microsoft.Threading.Tasks.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PCLWebUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\PCLWebUtility.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\PCLWebUtility.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Extensions, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\System.Net.Http.Extensions.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Primitives, Version=4.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\System.Net.Http.Primitives.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -96,39 +96,39 @@
     <Reference Include="System.Xml" />
     <Reference Include="Tweetinvi, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.Controllers, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Controllers.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Controllers.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.Core, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Core.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Core.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.Credentials, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Credentials.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Credentials.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.Factories, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Factories.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Factories.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.Logic, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Logic.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Logic.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.Security, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Security.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Security.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.Streams, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Streams.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.Streams.dll</HintPath>
     </Reference>
     <Reference Include="Tweetinvi.WebLogic, Version=0.9.4.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\vmware-host\Shared Folders\Documents\Visual Studio 2013\Projects\Project2015\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.WebLogic.dll</HintPath>
+      <HintPath>..\Tweetinvi 0.9.4.1 - Binaries\Tweetinvi.WebLogic.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -51,3 +51,36 @@ Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Micro
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.xml
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\TwitterTest.exe.config
+F:\Desktop\GitHub\Project2015\TwitterTest\obj\x86\Debug\TwitterTest.exe
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\TwitterTest.exe
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\TwitterTest.pdb
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Facebook.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Newtonsoft.Json.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Facebook.xml
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.xml
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+F:\Desktop\GitHub\Project2015\TwitterTest\obj\x86\Debug\TestApp.csprojResolveAssemblyReference.cache
+F:\Desktop\GitHub\Project2015\TwitterTest\obj\x86\Debug\TwitterTest.pdb
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Autofac.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Threading.Tasks.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\PCLWebUtility.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\System.Net.Http.Extensions.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\System.Net.Http.Primitives.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Controllers.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Core.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Credentials.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Factories.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Logic.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Security.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Streams.dll
+F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.WebLogic.dll
