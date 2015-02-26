@@ -16,9 +16,6 @@ namespace TestApp
    
     class TestWeather
     {
-        
-
-        
 
         //declaring these object outside main and internal so they can be used within the namespace
         internal static Subscriber twit = new Twitter();
@@ -38,12 +35,12 @@ namespace TestApp
            //test adding of a subscriber to CorkBuoy WeatherStation
             cork.addSub(twit);
 
-            //create a Threading.timer object to call the update method every 90000 milliseconds
-                Timer time = new Timer(TimerCallback, null, 0, 90000);
+            //create a Threading.timer object to call the update method every 300000 milliseconds 5 mins
+             Timer time = new Timer(TimerCallback, null, 0, 90000);
 
             }catch(Exception e)
             {
-                Console.WriteLine("Error has occured: " + e.Message);    
+                Console.WriteLine("Error has occured and was thrown back to Main: " + e.Message);    
             }
             //to keep the console open and to keep the program running
             Console.WriteLine("DO NOT CLOSE  THIS CONSOLE IT WILL STOP THE APPLICATION RUNNING");
@@ -53,9 +50,17 @@ namespace TestApp
 
         private static void TimerCallback(Object o)
         {
-            //call the get update but only return a new value if is a new hour since last update
-            lastTimeUpdate = cork.getUpdate(lastTimeUpdate);
-
+           try
+            {
+                //call the get update but only return a new value if is a new hour since last update
+                lastTimeUpdate = cork.getUpdate(lastTimeUpdate);
+                Console.WriteLine("Timer method ran");
+            }
+           catch (Exception e)
+           {
+                Console.WriteLine("In timerCallBack Error has occured: " + e.Message);
+                throw;
+            }
             //force the collection
             GC.Collect();
         }

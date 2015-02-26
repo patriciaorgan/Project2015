@@ -20,9 +20,9 @@ namespace TestApp
                     "d4R7LaqJJWAVB5FgTkkPKtNtY",
                     "boFYhisfKKvBvgZj4pNfDcOQbfqNdv2jeBzh871rkdNrUoBSd3");
             }
-            catch (Exception ex)
+            catch  (Exception ex)
             {
-                Console.WriteLine("Error has occured: " + ex);
+                Console.WriteLine("Error has occured when accessing Twitter: " + ex);
             }
         }
 
@@ -38,7 +38,7 @@ namespace TestApp
                 }
                 catch (System.TypeInitializationException)
                 {
-                    Console.WriteLine("Could not access Twitter account");
+                    Console.WriteLine("Publish data could not be read");
                 }
             }
         }

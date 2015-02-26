@@ -61,24 +61,34 @@ namespace TestApp
             currentTime = DateTime.Now;
             //store the hour
             long hour = currentTime.Hour;
-            url = "http://erddap.marine.ie/erddap/tabledap/IWBNetwork.htmlTable?time,AtmosphericPressure,WindDirection,WindSpeed,Gust,AirTemperature,RelativeHumidity&station_id=";
-
+            //url = "http://erddap.marine.ie/erddap/tabledap/IWBNetwork.htmlTable?time,AtmosphericPressure,WindDirection,WindSpeed,Gust,AirTemperature,RelativeHumidity&station_id=";
+           //break code to test exception
+           // url = "http://erddap.marine.ie/erddap/tabledap/IWBNetwork.htmlTable?station_id=";
+            url = "";
             //only carry out this method if the time of the hour is different from the last hour
             //and only if it is past 30 mins in the hour as the URL usually will not have displayed
             if ((lastTime.Hour != hour) && (currentTime.Minute >30))
             {
-                
-                 try {
-                     
                     string patt = @"yyyy-MM-dd";
                     string newD = currentTime.ToString(patt);
                      //add the search parameters like station id and date and time to the url
                     url += "%22" + _stationID + "%22&time>=" + newD + "T" + hour+ ":00:00Z";
-
-                    //declare a web object and from that a document object that loads the URL that is required
+                
+                //declare a web object and from that a document object that loads the URL that is required
                     HtmlAgilityPack.HtmlWeb web = new HtmlWeb();
-                    HtmlAgilityPack.HtmlDocument doc = web.Load(url);
+                    HtmlAgilityPack.HtmlDocument doc;
+
+                  try
+                  {
+                    doc = web.Load(url);
                     Console.WriteLine(url);
+                 }
+                  catch (UriFormatException e)
+                 {
+                     Console.WriteLine("Error with reading data from URL: ");
+                      throw;
+
+                 }
                     //this is to keep count of index in loops
                     int i = 0;
                    
@@ -126,11 +136,7 @@ namespace TestApp
 
                       
 
-                 }
-                 catch (Exception)
-                 {
-                        Console.WriteLine("Error with reading data from URL: ");
-                }
+               
 
                 //printing to check contence
                 foreach (var h in table)

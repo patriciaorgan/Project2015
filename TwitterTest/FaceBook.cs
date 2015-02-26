@@ -11,7 +11,7 @@ namespace TestApp
         public override void update(WeatherStation ws)
         {
             var client = new FacebookClient();
-            dynamic me = client.Get("totten");
+            dynamic me = client.Get("marineinst.testweather");
 
         }
     }

@@ -38,8 +38,6 @@ Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Tweet
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Tweetinvi.Security.dll
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Tweetinvi.Streams.dll
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Tweetinvi.WebLogic.dll
-Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\HtmlAgilityPack.pdb
-Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\HtmlAgilityPack.xml
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\obj\x86\Debug\TestApp.csprojResolveAssemblyReference.cache
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Facebook.dll
 Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\Facebook.xml
