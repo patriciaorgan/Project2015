@@ -91,7 +91,8 @@ namespace TestApp
                  }
                     //this is to keep count of index in loops
                     int i = 0;
-                   
+                    try
+                    {
                         //this loops through html tags <th> headers, using the class that this particular page uses
                         foreach (HtmlNode column in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/th"))
                         {
@@ -111,11 +112,11 @@ namespace TestApp
                                 i++;
                             }
                         }
-                  
-                    //reset the index
-                    i = 0;
-                  
-                    //this loops throught html tags <td> data elements, using the class that this particular page uses
+
+                        //reset the index
+                        i = 0;
+
+                        //this loops through html tags <td> data elements, using the class that this particular page uses
                         foreach (HtmlNode cell in doc.DocumentNode.SelectNodes("//table[@class='erd commonBGColor']/tr/td"))
                         {
                             //a catch to ensure the node is not null
@@ -134,7 +135,11 @@ namespace TestApp
                             }
                         }//end for loop
 
-                      
+                    }
+                    catch (NullReferenceException e)
+                    {
+                        Console.WriteLine("No table elements to read");
+                    }
 
                
 

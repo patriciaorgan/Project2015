@@ -82,3 +82,7 @@ F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Logic.dll
 F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Security.dll
 F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.Streams.dll
 F:\Desktop\GitHub\Project2015\TwitterTest\bin\Debug\Tweetinvi.WebLogic.dll
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\System.Web.Http.dll
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\System.Net.Http.Formatting.dll
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\System.Web.Http.xml
+Z:\Documents\Visual Studio 2013\Projects\Project2015\TwitterTest\bin\Debug\System.Net.Http.Formatting.xml

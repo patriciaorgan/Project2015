@@ -8,6 +8,8 @@ namespace TestApp
      abstract class Subscriber
     {
          public abstract void update(WeatherStation ws);
-        
+
+
+         
     }
 }

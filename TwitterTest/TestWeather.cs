@@ -19,6 +19,7 @@ namespace TestApp
 
         //declaring these object outside main and internal so they can be used within the namespace
         internal static Subscriber twit = new Twitter();
+        internal static Subscriber faceb = new FaceBook();
         internal static WeatherStation cork = new CorkBuoyM3();
         internal static DateTime lastTimeUpdate = default(DateTime);
 
@@ -27,10 +28,20 @@ namespace TestApp
             
             try
             {
-            //test the get method for facebook
-            var client = new FacebookClient();
-            dynamic me = client.Get("marineinst.testweather");
-            Console.WriteLine(me);
+                FaceBook fb = new FaceBook();
+                /*
+                FacebookClient fbClient = new FacebookClient();
+                //me = client.Get("marineinst.testweather");
+                dynamic result = fbClient.Get("marineinst.testweather", new
+                {
+                    client_id = fbClient.AppId,
+                    client_secret = fbClient.AppSecret,
+                    grant_type = "fb_exchange_token",
+                    fb_exchange_token = fbClient.AccessToken
+                });
+                Console.WriteLine(result);
+                */
+                //fbClient.Post();
             
            //test adding of a subscriber to CorkBuoy WeatherStation
             cork.addSub(twit);
