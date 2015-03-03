@@ -32,7 +32,7 @@ namespace TestApp
         public abstract void UpdateSubs();
 
         //this will use the URL of ERDDAP and call it for the last hour, and store the result in the string 2d array
-        public abstract DateTime getUpdate(DateTime lastTime);
+        public abstract void getUpdate(ref DateTime lastTime);
      
     }
 }

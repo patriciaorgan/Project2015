@@ -28,23 +28,11 @@ namespace TestApp
             
             try
             {
-                FaceBook fb = new FaceBook();
-                /*
-                FacebookClient fbClient = new FacebookClient();
-                //me = client.Get("marineinst.testweather");
-                dynamic result = fbClient.Get("marineinst.testweather", new
-                {
-                    client_id = fbClient.AppId,
-                    client_secret = fbClient.AppSecret,
-                    grant_type = "fb_exchange_token",
-                    fb_exchange_token = fbClient.AccessToken
-                });
-                Console.WriteLine(result);
-                */
-                //fbClient.Post();
-            
-           //test adding of a subscriber to CorkBuoy WeatherStation
+               
+           //Adding of a subscribers to CorkBuoy WeatherStation
             cork.addSub(twit);
+            cork.addSub(faceb);
+            
 
             //create a Threading.timer object to call the update method every 300000 milliseconds 5 mins
              Timer time = new Timer(TimerCallback, null, 0, 90000);
@@ -64,7 +52,7 @@ namespace TestApp
            try
             {
                 //call the get update but only return a new value if is a new hour since last update
-                lastTimeUpdate = cork.getUpdate(lastTimeUpdate);
+                cork.getUpdate(ref lastTimeUpdate);
                 Console.WriteLine("Timer method ran");
             }
            catch (Exception e)

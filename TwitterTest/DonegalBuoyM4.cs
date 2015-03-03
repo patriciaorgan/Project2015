@@ -29,9 +29,9 @@ namespace TestApp
             // this.latestUpdate = "Donegal:Jan26 10:00 ☔ 8.3°C  N/NW/18.7kn/Gust25.9kn #BuoyM4";
         }
 
-        public override DateTime getUpdate(DateTime lastTime)
+        public override void getUpdate(ref DateTime lastTime)
         {
-            return DateTime.Now;
+            lastTime = DateTime.Now;
         }
 
     }
