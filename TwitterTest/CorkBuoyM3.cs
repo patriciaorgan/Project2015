@@ -24,8 +24,7 @@ namespace TestApp
         //constructor
         public CorkBuoyM3()
         {
-            //initialise the 2D array to the required amount of columns
-            table = new string[2, COLUMNS];
+            
             _stationID = "M3";
             
         }
@@ -57,6 +56,8 @@ namespace TestApp
         //this method extracts the info from the URL of ERDDAP and populates the table 2d array
         public override void getUpdate(ref DateTime lastTime)
         {
+            //initialise the 2D array to the required amount of columns
+            table = new string[2, COLUMNS];
             //set the current Date time to now
             currentTime = DateTime.Now;
             //store the hour
@@ -191,7 +192,7 @@ namespace TestApp
 
             //need to empty the table of its data as not required outside this method ans dont 
             //want it being held for nexr hour
-            table = null;
+            
 
             
         }//end method update
